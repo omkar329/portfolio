@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Profile image
 
 - The About section no longer includes a built-in placeholder image.
@@ -15,3 +16,6 @@ Copy-Item C:\path\to\my-photo.jpg -Destination .\assets\profile.jpg
 ```
 
 If you want, I can add the image back for you — upload the photo and I'll place it in `assets/` and update both pages.
+=======
+# portfolio
+>>>>>>> 93b95caf281c33192293e3fa8a102f52e0963bc5
