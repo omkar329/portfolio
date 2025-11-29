@@ -14,11 +14,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header / Navbar -->
-  <header class="navbar">
-    <div class="logo">Omkar Kaunsalye</div>
-    <nav>
-      <ul>
+  <!-- Header / Navbar (centered logo variant) -->
+  <header class="navbar centered">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-menu" role="navigation" aria-label="Main">
+      <div class="logo">Omkar K..</div>
+      <ul class="nav-right">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -32,18 +33,15 @@
 
   <!-- Hero Section -->
   <section id="hero" class="hero">
+    
+    
     <div class="hero-content">
-      <div class="hero-text">
-        <h1>Hi, I'm <span>Omkar Kaunsalye</span></h1>
-        <h2><span id="typed"></span></h2>
-        <div class="hero-cta">
-          <a href="assets/Omkar_Kaunsalye_CV.pdf" class="btn" download>Download CV</a>
-          <a href="#contact" class="btn btn-outline">Contact</a>
-        </div>
-        <div class="hero-socials">
-          <a href="https://www.linkedin.com/in/omkar-kaunsalye-82a7a832b" target="_blank" aria-label="LinkedIn"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
-          <a href="https://www.instagram.com/it.s_omi.01" target="_blank" aria-label="Instagram"><img src="assets/instagram.svg" alt="Instagram"></a>
-          <a href="#" target="_blank" aria-label="GitHub"><img src="assets/github.svg" alt="GitHub"></a>
+      <div class="hero-overlay">
+        <h1 class="hero-title">Hi, I'm <span>Omkar K..</span></h1>
+        <h2 class="hero-sub"><span id="typed"></span></h2>
+        <div class="hero-links">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn-outline" href="#contact">Contact</a>
         </div>
       </div>
       <div class="hero-image-container">
@@ -57,15 +55,15 @@
     <div class="about-card">
       <div class="about-info">
           <h3>About Me</h3>
-          <p>I'm Omkar Kaunsalye, a passionate Machine Learning Engineering student with hands-on experience in building intelligent systems using Python, ML algorithms, data preprocessing, model training, and evaluation techniques.</p>
-          <p>Currently pursuing B.Tech in AIML at Deogiri College (DBATU), I focus on developing ML-driven solutions that solve real-world problems with accuracy and efficiency.</p>
+          <p>I’m Omkar Balaji Kaunsalye, a B.Tech AIML Engineering student at Deogiri College, DBATU University. I have a strong interest in Artificial Intelligence, Machine Learning, Web Development, and Software Engineering. I enjoy turning ideas into real projects that solve practical problems.</p>
+          <p>My journey in tech started with my Diploma in Computer Engineering, where I built a solid foundation in programming and logical thinking. Now in AIML, I am expanding my skills in Python, Java, Data Science, and modern web technologies. I love exploring new tools, building smart applications, and constantly improving my abilities through hands-on learning.</p>
 
           <h4>I have strong skills in</h4>
           <ul class="skills-list-check">
-            <li>✔ Machine Learning (Supervised &amp; Unsupervised)</li>
-            <li>✔ Python, NumPy, Pandas, Scikit-Learn</li>
-            <li>✔ Data Analysis &amp; Visualization</li>
-            <li>✔ Model Training, Tuning &amp; Evaluation</li>
+            <li> Machine Learning (Supervised &amp; Unsupervised)</li>
+            <li> Python, NumPy, Pandas, Scikit-Learn</li>
+            <li> Data Analysis &amp; Visualization</li>
+            <li> Model Training, Tuning &amp; Evaluation</li>
           </ul>
 
           <p><strong>Web Development</strong> (for ML deployment)</p>
@@ -78,25 +76,78 @@
   <!-- Skills Section -->
   <section id="skills" class="skills">
     <h3>Skills</h3>
-    <div class="skills-list">
-      <div class="skill">Web Development</div>
-      <div class="skill">Machine Learning</div>
-      <div class="skill">Deep Learning</div>
-      <div class="skill">Java</div>
-      <div class="skill">Python</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Node.js</div>
-      <div class="skill">Bootstrap</div>
-      <div class="skill">HTML/CSS/JS</div>
+    <div class="skills-list skills-circles">
+      <div class="skill-circle" data-percent="90">
+        <div class="skill-icon"><img src="assets/web.svg" alt="Web Dev"></div>
+        <svg viewBox="0 0 100 100" class="progress-ring"><circle class="ring-bg" cx="50" cy="50" r="36"></circle><circle class="ring" cx="50" cy="50" r="36"></circle></svg>
+        <div class="skill-meta"><div class="skill-value">90%</div><div class="skill-name">Web Dev</div></div>
+        <div class="skill-desc">Experienced building responsive web apps with HTML, CSS and JavaScript. Focus on performance and accessibility.</div>
+      </div>
+      <div class="skill-circle" data-percent="85">
+        <div class="skill-icon"><img src="assets/ml.svg" alt="Machine Learning"></div>
+        <svg viewBox="0 0 100 100" class="progress-ring"><circle class="ring-bg" cx="50" cy="50" r="36"></circle><circle class="ring" cx="50" cy="50" r="36"></circle></svg>
+        <div class="skill-meta"><div class="skill-value">85%</div><div class="skill-name">Machine Learning</div></div>
+        <div class="skill-desc">Experience with model training, feature engineering and deployment using Python and scikit-learn.</div>
+      </div>
+      <div class="skill-circle" data-percent="78">
+        <div class="skill-icon"><img src="assets/dl.svg" alt="Deep Learning"></div>
+        <svg viewBox="0 0 100 100" class="progress-ring"><circle class="ring-bg" cx="50" cy="50" r="36"></circle><circle class="ring" cx="50" cy="50" r="36"></circle></svg>
+        <div class="skill-meta"><div class="skill-value">78%</div><div class="skill-name">Deep Learning</div></div>
+        <div class="skill-desc">Hands-on with neural networks, CNNs and transfer learning for image and sequence tasks.</div>
+      </div>
+      <div class="skill-circle" data-percent="72">
+        <div class="skill-icon"><img src="assets/java.svg" alt="Java"></div>
+        <svg viewBox="0 0 100 100" class="progress-ring"><circle class="ring-bg" cx="50" cy="50" r="36"></circle><circle class="ring" cx="50" cy="50" r="36"></circle></svg>
+        <div class="skill-meta"><div class="skill-value">72%</div><div class="skill-name">Java</div></div>
+        <div class="skill-desc">Core Java knowledge — OOP, collections and building reliable backend components.</div>
+      </div>
+      <div class="skill-circle" data-percent="88">
+        <div class="skill-icon"><img src="assets/python.svg" alt="Python"></div>
+        <svg viewBox="0 0 100 100" class="progress-ring"><circle class="ring-bg" cx="50" cy="50" r="36"></circle><circle class="ring" cx="50" cy="50" r="36"></circle></svg>
+        <div class="skill-meta"><div class="skill-value">88%</div><div class="skill-name">Python</div></div>
+        <div class="skill-desc">Python for data analysis, scripting and ML pipelines — pandas, numpy, and visualization.</div>
+      </div>
+      <div class="skill-circle" data-percent="70">
+        <div class="skill-icon"><img src="assets/sql.svg" alt="SQL"></div>
+        <svg viewBox="0 0 100 100" class="progress-ring"><circle class="ring-bg" cx="50" cy="50" r="36"></circle><circle class="ring" cx="50" cy="50" r="36"></circle></svg>
+        <div class="skill-meta"><div class="skill-value">70%</div><div class="skill-name">SQL</div></div>
+        <div class="skill-desc">Database querying and schema design for reliable data storage and analytics.</div>
+      </div>
+      <div class="skill-circle" data-percent="80">
+        <div class="skill-icon"><img src="assets/nodejs.svg" alt="Node.js"></div>
+        <svg viewBox="0 0 100 100" class="progress-ring"><circle class="ring-bg" cx="50" cy="50" r="36"></circle><circle class="ring" cx="50" cy="50" r="36"></circle></svg>
+        <div class="skill-meta"><div class="skill-value">80%</div><div class="skill-name">Node.js</div></div>
+        <div class="skill-desc">Building APIs and backend services with Node.js and Express for modern web apps.</div>
+      </div>
+      <div class="skill-circle" data-percent="75">
+        <div class="skill-icon"><img src="assets/bootstrap.svg" alt="Bootstrap"></div>
+        <svg viewBox="0 0 100 100" class="progress-ring"><circle class="ring-bg" cx="50" cy="50" r="36"></circle><circle class="ring" cx="50" cy="50" r="36"></circle></svg>
+        <div class="skill-meta"><div class="skill-value">75%</div><div class="skill-name">Bootstrap</div></div>
+        <div class="skill-desc">Rapid UI development with Bootstrap and responsive design patterns.</div>
+      </div>
+      <div class="skill-circle" data-percent="92">
+        <div class="skill-icon"><img src="assets/html.svg" alt="HTML/CSS/JS"></div>
+        <svg viewBox="0 0 100 100" class="progress-ring"><circle class="ring-bg" cx="50" cy="50" r="36"></circle><circle class="ring" cx="50" cy="50" r="36"></circle></svg>
+        <div class="skill-meta"><div class="skill-value">92%</div><div class="skill-name">HTML/CSS/JS</div></div>
+        <div class="skill-desc">Strong frontend fundamentals: semantic HTML, responsive CSS and dynamic JS.</div>
+      </div>
     </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects" class="projects">
     <h3>Projects</h3>
+    <div class="projects-controls">
+      <div class="projects-filter" role="tablist" aria-label="Project categories">
+        <button class="tag active" data-tag="all">All</button>
+        <button class="tag" data-tag="ml">ML</button>
+        <button class="tag" data-tag="web">Web</button>
+        <button class="tag" data-tag="embedded">Embedded</button>
+      </div>
+    </div>
     <div class="projects-grid">
       <div class="project-card">
-        <img src="assets/project1.jpg" alt="Sign Language to Words">
+        <img src="assets/project1.jpg" alt="Sign Language to Words" data-tags="embedded,ml">
         <div class="project-info">
           <h4>Sign Language to Words</h4>
           <p>ESP32-based real-time sign language recognition system converting gestures to words.</p>
@@ -104,9 +155,13 @@
           <a href="#" class="btn btn-sm">GitHub</a>
           <a href="#" class="btn btn-sm btn-outline">Live Demo</a>
         </div>
+        <div class="project-overlay">
+          <div class="overlay-tags">ESP32 • ML</div>
+          <div class="overlay-cta"><a href="#">GitHub</a><a href="#">Live</a></div>
+        </div>
       </div>
       <div class="project-card">
-        <img src="assets/project2.jpg" alt="Student Result Portal">
+        <img src="assets/project2.jpg" alt="Student Result Portal" data-tags="web">
         <div class="project-info">
           <h4>Student Result Portal</h4>
           <p>Role-based web portal for secure student result management.</p>
@@ -114,9 +169,13 @@
           <a href="#" class="btn btn-sm">GitHub</a>
           <a href="#" class="btn btn-sm btn-outline">Live Demo</a>
         </div>
+        <div class="project-overlay">
+          <div class="overlay-tags">Node.js • SQL</div>
+          <div class="overlay-cta"><a href="#">GitHub</a><a href="#">Live</a></div>
+        </div>
       </div>
       <div class="project-card">
-        <img src="assets/project3.jpg" alt="ML Algorithms">
+        <img src="assets/project3.jpg" alt="ML Algorithms" data-tags="ml">
         <div class="project-info">
           <h4>ML Algorithms</h4>
           <p>Implementations of Regression, Decision Trees, Random Forest, and more.</p>
@@ -124,15 +183,23 @@
           <a href="#" class="btn btn-sm">GitHub</a>
           <a href="#" class="btn btn-sm btn-outline">Live Demo</a>
         </div>
+        <div class="project-overlay">
+          <div class="overlay-tags">Python • Scikit-learn</div>
+          <div class="overlay-cta"><a href="#">GitHub</a><a href="#">Live</a></div>
+        </div>
       </div>
       <div class="project-card">
-        <img src="assets/project4.jpg" alt="Portfolio Website">
+        <img src="assets/project4.jpg" alt="Portfolio Website" data-tags="web">
         <div class="project-info">
           <h4>Portfolio Website</h4>
           <p>This modern, animated, responsive portfolio website.</p>
           <div class="tech">HTML, CSS, JS</div>
           <a href="#" class="btn btn-sm">GitHub</a>
           <a href="#" class="btn btn-sm btn-outline">Live Demo</a>
+        </div>
+        <div class="project-overlay">
+          <div class="overlay-tags">HTML • CSS • JS</div>
+          <div class="overlay-cta"><a href="#">GitHub</a><a href="#">Live</a></div>
         </div>
       </div>
     </div>
@@ -172,7 +239,7 @@
       <div class="contact-item contact-socials">
         <a href="https://www.linkedin.com/in/omkar-kaunsalye-82a7a832b" target="_blank"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
         <a href="https://www.instagram.com/it.s_omi.01" target="_blank"><img src="assets/instagram.svg" alt="Instagram"></a>
-        <a href="https://github.com/omkar-kaunsalye" target="_blank"><img src="assets/github.svg" alt="GitHub"></a>
+        <a href="https://github.com/omkar329" target="_blank" rel="noopener noreferrer"><img src="assets/github.svg" alt="GitHub"></a>
       </div>
     </div>
     <form class="contact-form">
@@ -201,7 +268,7 @@
       <div class="footer-socials">
         <a href="https://www.linkedin.com/in/omkar-kaunsalye-82a7a832b" target="_blank"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
         <a href="https://www.instagram.com/it.s_omi.01" target="_blank"><img src="assets/instagram.svg" alt="Instagram"></a>
-        <a href="#" target="_blank"><img src="assets/github.svg" alt="GitHub"></a>
+        <a href="https://github.com/omkar329" target="_blank" rel="noopener noreferrer"><img src="assets/github.svg" alt="GitHub"></a>
       </div>
       <div class="footer-copy">&copy; 2025 Omkar Kaunsalye. All rights reserved.</div>
     </div>

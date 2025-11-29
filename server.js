@@ -1,11 +1,15 @@
 ﻿require('dotenv').config();
 const express = require('express');
+const path = require('path');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Serve static files (frontend) from project root
+app.use(express.static(path.join(__dirname)));
 
 // Read SMTP config from environment
 const SMTP_USER = process.env.EMAIL_USER || '';
@@ -66,5 +70,5 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3001;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 app.listen(PORT, () => console.log(`Backend running on http://localhost:${PORT}`));
